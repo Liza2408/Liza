@@ -1,0 +1,12 @@
+setwd("C:/Users/Student/Desktop/111/")
+mydata<- read.table(file = "Iran.txt", header = TRUE)
+attach(mydata)
+plot(Year, terrorism,xlab="Год", ylab="количество упоминаний",main="Частота упоминаний характеристик для Ирана",pch=15,col="red",type="b",xlim=c(2000,2014),ylim=c(0,16000))
+lines(Year,terrorist,xlim=c(2000,2014),pch=16,col="green",type="b")
+lines(Year,occupation,xlim=c(2000,2014),pch=17,col="black",type="b") 
+lines(Year,narcotic,xlim=c(2000,2014),pch=18,col="pink",type="b")
+lines(Year,violation,xlim=c(2000,2014),pch=19,col="Orange",type="b")
+lines(Year,democracy,xlim=c(2000,2014),pch=20,col="Gray ",type="b")
+lines(Year,development,xlim=c(2000,2014),pch=21,col="Brown",type="b")
+legend ("topleft",inset=0.01,title="характеристики",c("терроризм","террорист","окупация","наркотики","Насилие","демократия","развитие"),lty=c(1,1,1,1,1,1,1),pch=c(15,16,17,18,19,20,21),col=c("red","green","black","pink","Orange","Gray ","Brown"))
+
